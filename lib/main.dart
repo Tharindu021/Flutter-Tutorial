@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:my_first_flutter/Screens/firstScreen.dart';
+//import 'package:my_first_flutter/Screens/firstScreen.dart';
 
 import 'Screens/secondScreen.dart';
 
@@ -148,7 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (_) {
-                      return FirstPage();
+                      return FirstPage("This is First View");
                   }
                 ));
                 

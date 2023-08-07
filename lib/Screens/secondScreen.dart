@@ -7,31 +7,43 @@ import 'package:my_first_flutter/main.dart';
 
 
 class SecondScreen extends StatelessWidget {
+  
+  String text = "Something";
+
+  SecondScreen(String text) {
+    this.text = text;
+  }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar:AppBar(
-          title: Text("The Second page of the App."),
-        ),
-        body: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text('This Is Second page..',
-              style: TextStyle(fontSize: 20.0)
-              ),
-            ],          
-          )
-        ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.home),
-          onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(
-              builder: (_) {
-                return MyHomePage(); 
+    return MaterialApp(
+      home: Scaffold(
+          appBar:AppBar(
+            title: Text("The Second Page."),
+          ),
+          body: Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                text,
+                style: TextStyle(fontSize: 20.0)
+                ),
+              ],          
+            )
+          ),
+          floatingActionButton: FloatingActionButton(
+            child: Icon(Icons.home),
+            onPressed: () {
+              //Navigator.pushNamed(context, 'home');
+              //Navigator.of(context).pushNamed('/home');
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (_) {
+                  return MyHomePage(); 
+                }
+                ));
               }
-              ));
-          }),
+          ),
+      ),
     );
   }
 }
