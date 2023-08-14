@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:my_first_flutter/Screens/secondScreen.dart';
 import 'package:my_first_flutter/main.dart';
 
+// ignore: must_be_immutable
 class FirstPage extends StatelessWidget {
   //const FirstPage({super.key});
 

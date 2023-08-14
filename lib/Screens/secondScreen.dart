@@ -6,11 +6,13 @@ import 'package:my_first_flutter/main.dart';
 
 
 
+// ignore: must_be_immutable
 class SecondScreen extends StatelessWidget {
   
   String text = "Something";
 
   SecondScreen(String text) {
+    // ignore: prefer_initializing_formals
     this.text = text;
   }
   @override
